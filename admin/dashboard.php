@@ -59,7 +59,7 @@
             <main class="dashboard-main">
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 gap-3">
                 <div>
-                    <h1 class="h3 mb-1">Dashboard</h1>
+                    <h1 class="h5 mb-1 fw-bold">Dashboard</h1>
                     <p class="text-muted mb-0">Overview of your store performance for the last 7 days.</p>
                 </div>
                 <div class="d-flex gap-2">
