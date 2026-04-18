@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="../src/assets/css/admin/admin-dashboard.css" rel="stylesheet">
     <link href="../src/assets/css/admin/left-side-bar.css" rel="stylesheet">
     <link href="../src/assets/css/admin/top-navbar.css" rel="stylesheet">
@@ -19,19 +20,19 @@
             <div class="menu-card p-0">
                 <div class="list-group sidebar-nav">
                     <a href="dashboard.php" class="list-group-item list-group-item-action active">
-                        <span class="nav-icon">🏠</span>
+                        <i class="nav-icon bi bi-house-door-fill"></i>
                         Dashboard
                     </a>
                     <a href="contacts.php" class="list-group-item list-group-item-action">
-                        <span class="nav-icon">👥</span>
+                        <i class="nav-icon bi bi-people-fill"></i>
                         Contacts
                     </a>
                     <a href="inventory.php" class="list-group-item list-group-item-action">
-                        <span class="nav-icon">🛍️</span>
+                        <i class="nav-icon bi bi-bag-fill"></i>
                         Products
                     </a>
                     <a href="orders.php" class="list-group-item list-group-item-action">
-                        <span class="nav-icon">📦</span>
+                        <i class="nav-icon bi bi-box-seam"></i>
                         Orders
                     </a>
                 </div>
@@ -41,7 +42,9 @@
         <main class="dashboard-main">
             <div class="top-navbar d-flex align-items-center justify-content-end mb-4">
                 <div class="d-flex align-items-center gap-2 top-navbar-actions">
-                    <button type="button" class="btn btn-light btn-sm top-navbar-icon">🔔</button>
+                    <button type="button" class="btn btn-light btn-sm top-navbar-icon">
+                        <i class="bi bi-bell"></i>
+                    </button>
                     <div class="profile-menu d-flex align-items-center gap-2">
                         <div class="profile-avatar">MK</div>
                         <div class="d-none d-sm-flex flex-column profile-text">
