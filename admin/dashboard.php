@@ -23,38 +23,40 @@
                         <i class="nav-icon bi bi-house-door-fill"></i>
                         Dashboard
                     </a>
-                    <a href="contacts.php" class="list-group-item list-group-item-action">
-                        <i class="nav-icon bi bi-people-fill"></i>
-                        Contacts
+                    <a href="orders.php" class="list-group-item list-group-item-action">
+                        <i class="nav-icon bi bi-box-seam"></i>
+                        Orders
                     </a>
                     <a href="inventory.php" class="list-group-item list-group-item-action">
                         <i class="nav-icon bi bi-bag-fill"></i>
                         Products
                     </a>
-                    <a href="orders.php" class="list-group-item list-group-item-action">
-                        <i class="nav-icon bi bi-box-seam"></i>
-                        Orders
+                    <a href="contacts.php" class="list-group-item list-group-item-action">
+                        <i class="nav-icon bi bi-people-fill"></i>
+                        Contacts
                     </a>
                 </div>
             </div>
         </aside>
 
-        <main class="dashboard-main">
-            <div class="top-navbar d-flex align-items-center justify-content-end mb-4">
-                <div class="d-flex align-items-center gap-2 top-navbar-actions">
-                    <button type="button" class="btn btn-light btn-sm top-navbar-icon">
-                        <i class="bi bi-bell"></i>
-                    </button>
-                    <div class="profile-menu d-flex align-items-center gap-2">
-                        <div class="profile-avatar">MK</div>
-                        <div class="d-none d-sm-flex flex-column profile-text">
-                            <span class="fw-bold">Mico Nakase</span>
-                            <small class="text-muted">Admin</small>
+        <div class="dashboard-wrapper">
+            <nav class="top-navbar">
+                <div class="d-flex align-items-center justify-content-end">
+                    <div class="d-flex align-items-center gap-2 top-navbar-actions">
+                        <button type="button" class="btn btn-light btn-sm top-navbar-icon">
+                            <i class="bi bi-bell"></i>
+                        </button>
+                        <div class="profile-menu d-flex align-items-center gap-2">
+                            <div class="profile-avatar">MK</div>
+                            <div class="d-none d-sm-flex flex-column profile-text">
+                                <span class="fw-bold">Mico Nakase</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </nav>
 
+            <main class="dashboard-main">
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 gap-3">
                 <div>
                     <h1 class="h3 mb-1">Dashboard</h1>
@@ -125,7 +127,8 @@
                     </div>
                 </div>
             </div>
-        </main>
+            </main>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-8DBwxvghb+f8w824cDtgFXtW+eLk+ifaFVIJ9ai0SyxgbpPzJblwXERQ8GHKq2ya" crossorigin="anonymous"></script>
