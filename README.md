@@ -1,1 +1,2 @@
-# daily-spot-cafe
+# DAILY SPOT CAFE WEB SYSTEM
+

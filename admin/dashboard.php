@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../src/assets/css/admin/admin-dashboard.css" rel="stylesheet">
+    <link href="../src/assets/css/admin/left-side-bar.css" rel="stylesheet">
+    <link href="../src/assets/css/admin/top-navbar.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-app">
+        <aside class="sidebar bg-white shadow-sm">
+            <div class="sidebar-brand mb-4">
+                <div class="h4 mb-1">Daily Spot Cafe</div>
+                <small class="text-muted">Admin panel</small>
+            </div>
+            <div class="menu-card p-0">
+                <div class="list-group sidebar-nav">
+                    <a href="dashboard.php" class="list-group-item list-group-item-action active">
+                        <span class="nav-icon">🏠</span>
+                        Dashboard
+                    </a>
+                    <a href="contacts.php" class="list-group-item list-group-item-action">
+                        <span class="nav-icon">👥</span>
+                        Contacts
+                    </a>
+                    <a href="inventory.php" class="list-group-item list-group-item-action">
+                        <span class="nav-icon">🛍️</span>
+                        Products
+                    </a>
+                    <a href="orders.php" class="list-group-item list-group-item-action">
+                        <span class="nav-icon">📦</span>
+                        Orders
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <div class="top-navbar d-flex align-items-center justify-content-end mb-4">
+                <div class="d-flex align-items-center gap-2 top-navbar-actions">
+                    <button type="button" class="btn btn-light btn-sm top-navbar-icon">🔔</button>
+                    <div class="profile-menu d-flex align-items-center gap-2">
+                        <div class="profile-avatar">MK</div>
+                        <div class="d-none d-sm-flex flex-column profile-text">
+                            <span class="fw-bold">Mico Nakase</span>
+                            <small class="text-muted">Admin</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 gap-3">
+                <div>
+                    <h1 class="h3 mb-1">Dashboard</h1>
+                    <p class="text-muted mb-0">Overview of your store performance for the last 7 days.</p>
+                </div>
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-outline-secondary btn-sm">Last 7 Days</button>
+                    <button type="button" class="btn btn-primary btn-sm">Add Reports</button>
+                </div>
+            </div>
+
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <div class="dashboard-card p-3 h-100">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div>
+                                <div class="metric-label mb-2">Sales</div>
+                                <div class="metric-value">No Data Available</div>
+                            </div>
+                            <button type="button" class="btn btn-outline-dark btn-sm">View</button>
+                        </div>
+                        <p class="text-muted mb-0">Last 7 days</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dashboard-card p-3 h-100">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div>
+                                <div class="metric-label mb-2">Orders</div>
+                                <div class="metric-value">No Data Available</div>
+                            </div>
+                            <button type="button" class="btn btn-outline-dark btn-sm">View</button>
+                        </div>
+                        <p class="text-muted mb-0">Last 7 days</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dashboard-card p-3 h-100">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div>
+                                <div class="metric-label mb-2">Unfulfilled Orders</div>
+                                <div class="metric-value">No Data Available</div>
+                            </div>
+                            <button type="button" class="btn btn-outline-dark btn-sm">View</button>
+                        </div>
+                        <p class="text-muted mb-0">Last 7 days</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gy-4 mt-0">
+                <div class="col-md-6">
+                    <div class="dashboard-card p-3 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="card-header-sm">Daily Gross Sales</div>
+                        </div>
+                        <div class="border rounded-3" style="height: 240px; background: linear-gradient(180deg, #f8f9fa, #fff);"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="dashboard-card p-3 h-100">
+                        <div class="card-header-sm mb-3">Total Sales</div>
+                        <div class="metric-value">No Data Available</div>
+                    </div>
+                    <div class="dashboard-card p-3 mt-4">
+                        <div class="card-header-sm mb-3">Top Selling Products</div>
+                        <div class="metric-value">No Data Available</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-8DBwxvghb+f8w824cDtgFXtW+eLk+ifaFVIJ9ai0SyxgbpPzJblwXERQ8GHKq2ya" crossorigin="anonymous"></script>
+</body>
+</html>
