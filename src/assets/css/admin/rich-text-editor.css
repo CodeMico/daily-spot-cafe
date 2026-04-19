@@ -1,0 +1,13 @@
+/* Match your bg-light style */
+.ql-toolbar.ql-snow {
+    border: none !important;
+    background-color: #f8f9fa;
+    border-radius: 8px 8px 0 0;
+}
+
+.ql-container.ql-snow {
+    border: none !important;
+    background-color: #f8f9fa;
+    font-family: inherit;
+    font-size: 0.9rem;
+}

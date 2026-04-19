@@ -6,9 +6,12 @@
     <title>Inventory Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
+    <link href="https://quilljs.com" rel="stylesheet">
     <link href="../src/assets/css/admin/admin-dashboard.css" rel="stylesheet">
     <link href="../src/assets/css/admin/left-side-bar.css" rel="stylesheet">
     <link href="../src/assets/css/admin/top-navbar.css" rel="stylesheet">
+    <link href="../src/assets/css/admin/rich-text-editor.css" rel="stylesheet">
 </head>
 <body>
     <div class="dashboard-app">
@@ -85,18 +88,122 @@
                         <span class="dashboard-tooltip ms-2">
                             <i class="bi bi-question-circle-fill text-secondary" aria-hidden="true"></i>
                             <span class="dashboard-tooltip-text" role="tooltip">
-                                View a quick snapshot of your business performance—track sales, top-selling products, website visitor trends, and key reports all in one place.
-                            </span>
+                                View, edit, and track your cafe's products. Keep your stock count accurate to prevent overselling.</span>
                         </span>
                     </h1>
                 </div>
+            </div>
+
+            <div class="dashboard-card p-4 mt-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 gap-3">
+                    <div class="input-group" style="max-width: 400px;">
+                        <span class="input-group-text bg-white border-end-0">
+                            <i class="bi bi-search text-muted"></i>
+                        </span>
+                        <input type="text" 
+                            id="inventorySearch" 
+                            class="form-control border-start-0 ps-0" 
+                            placeholder="Search...">
+                    </div>
+                    
+                    <button class="btn btn-primary btn-sm px-4" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                        <i class="bi bi-plus-lg me-1"></i> Add Product
+                    </button>
+                </div>
+                
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Product ID</th>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                                <th>Date Created</th>
+                                <th class="text-end">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Example Row 1 -->
+                            <tr>
+                                <td>#001</td>
+                                <td>Java Chip Frappuccino</td>
+                                <td>Beverages</td>
+                                <td>$4.50</td>
+                                <td><span class="badge bg-success-subtle text-success">Published</span></td>
+                                <td>2024-06-01</td>
+                                <td class="text-end">
+                                    <button class="btn btn-light btn-sm"><i class="bi bi-pencil"></i></button>
+                                    <button class="btn btn-light btn-sm text-danger"><i class="bi bi-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
             </main>
             
         </div>
     </div>
 
+    <!-- ADD PRODUCTS MODAL -->
+     <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title fw-bold" id="addProductModalLabel">Add New Product</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form id="addProductForm">
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">Product Name</label>
+                        <input type="text" class="form-control bg-light border-0" placeholder="Enter product name" required>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label small fw-bold">Category</label>
+                            <select class="form-select bg-light border-0">
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label small fw-bold">Price (PHP)</label>
+                            <input type="number" step="0.01" class="form-control bg-light border-0" placeholder="0.00" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">Short Description</label>
+                        <input type="text" class="form-control bg-light border-0" >
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">Long Description</label>
+                            <div id="editor-container" style="height: 200px; border-radius: 0 0 8px 8px;"></div>
+                        <input type="hidden" name="long_description" id="long_description">
+                    </div>
+
+
+                    <div class="mb-0 text-end pt-3">
+                        <button type="button" class="btn btn-light px-4 me-2" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary px-4">Save Product</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
     <script src="../src/assets/javascript/admin/left-side-bar.js"></script>
+    <script src="../src/assets/javascript/admin/rich-text-editor.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-8DBwxvghb+f8w824cDtgFXtW+eLk+ifaFVIJ9ai0SyxgbpPzJblwXERQ8GHKq2ya" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script></body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+    <script src="https://quilljs.com"></script>
+</body>
 </html>
