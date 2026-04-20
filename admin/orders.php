@@ -77,6 +77,72 @@
                     </div>
                 </div>
             </nav>
+
+            <main class="dashboard-main">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 gap-3">
+                <div>
+                    <h1 class="h5 mb-1 fw-bold">Orders
+                        <span class="dashboard-tooltip ms-2">
+                            <i class="bi bi-question-circle-fill text-secondary" aria-hidden="true"></i>
+                            <span class="dashboard-tooltip-text" role="tooltip">
+                                View, edit, and track your cafe's orders. Manage customer requests and ensure timely fulfillment.</span>
+                        </span>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="dashboard-card p-4 mt-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 gap-3">
+                    <div class="input-group" style="max-width: 400px;">
+                        <span class="input-group-text bg-white border-end-0">
+                            <i class="bi bi-search text-muted"></i>
+                        </span>
+                        <input type="text" 
+                            id="inventorySearch" 
+                            class="form-control border-start-0 ps-0" 
+                            placeholder="Search...">
+                    </div>
+                    
+                    <button class="btn btn-primary btn-sm px-4" data-bs-toggle="modal" data-bs-target="#addOrderModal">
+                        <i class="bi bi-plus-lg me-1"></i> Add Order
+                    </button>
+                </div>
+                
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Total Amount</th>
+                                <th>Order Status</th>
+                                <th>Payment Status</th>
+                                <th>Payment Type</th>
+                                <th class="text-end">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Example Row 1 -->
+                            <tr>
+                                <td>1</td>
+                                <td>Kurt Angel Martin</td>
+                                <td>2024-06-01 | 10:34 AM</td>
+                                <td>₱4.50</td>
+                                <td><span class="badge bg-success-subtle text-warning">Processing</span></td>
+                                <td><span class="badge bg-info-subtle text-warning">Pending</span></td>
+                                <td>Gcash</td>
+                                <td class="text-end">
+                                    <button class="btn btn-light btn-sm"><i class="bi bi-pencil"></i></button>
+                                    <button class="btn btn-light btn-sm text-danger"><i class="bi bi-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            </main>
         </div>
     </div>
 

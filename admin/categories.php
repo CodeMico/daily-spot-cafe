@@ -6,6 +6,8 @@
     <title>Categories Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
+    <link href="https://quilljs.com" rel="stylesheet">
     <link href="../src/assets/css/admin/admin-dashboard.css" rel="stylesheet">
     <link href="../src/assets/css/admin/left-side-bar.css" rel="stylesheet">
     <link href="../src/assets/css/admin/top-navbar.css" rel="stylesheet">
@@ -141,9 +143,67 @@
             </main>
         </div>
     </div>
+    
+    <!-- ADD CATEGORY MODAL -->
+    <div class="modal fade" id="addCategoryModal" tabindex="-1" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title fw-bold" id="addCategoryModalLabel">Add New Category</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form id="addCategoryForm">
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">Category Name*</label>
+                        <input type="text" class="form-control bg-light border-0" placeholder="Enter category name" required>
+                    </div>
+                    
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">Category Description*</label>
+                         <span class="dashboard-tooltip ms-2">
+                            <i class="bi bi-question-circle-fill text-secondary" aria-hidden="true"></i>
+                            <span class="dashboard-tooltip-text" role="tooltip">
+                                A brief description of the category.</span>
+                        </span>
+                        <input type="text" class="form-control bg-light border-0" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">Category Image*</label>
+                        <span class="dashboard-tooltip ms-2">
+                            <i class="bi bi-question-circle-fill text-secondary" aria-hidden="true"></i>
+                            <span class="dashboard-tooltip-text" role="tooltip">
+                                Upload an image for the category.</span>
+                        </span>
+                        <div class="d-flex align-items-center gap-3">
+                            <!-- Preview Box -->
+                            <div id="image-preview" class="rounded bg-light d-flex align-items-center justify-content-center border" style="width: 80px; height: 80px; overflow: hidden;">
+                                <i class="bi bi-image text-muted fs-3"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <input type="file" class="form-control form-control-sm" id="productImage" accept="image/*" required>
+                                <small class="text-muted">Recommended: Square image (500x500px)</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-0 text-end pt-3">
+                        <button type="button" class="btn btn-light px-4 me-2" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary px-4">Save Category</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
     <script src="../src/assets/javascript/admin/left-side-bar.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-8DBwxvghb+f8w824cDtgFXtW+eLk+ifaFVIJ9ai0SyxgbpPzJblwXERQ8GHKq2ya" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+    <script src="https://quilljs.com"></script>
+</body>
 </html>
