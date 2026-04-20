@@ -62,7 +62,8 @@
 
         <div class="dashboard-wrapper">
             <nav class="top-navbar">
-                <div class="d-flex align-items-center justify-content-end">
+                <div class="d-flex align-items-center justify-content-between">
+                    <i class="bi bi-list fs-4" style="-webkit-text-stroke: 1px;"></i>
                     <div class="d-flex align-items-center gap-2 top-navbar-actions">
                         <button type="button" class="btn btn-light btn-sm top-navbar-icon">
                             <i class="bi bi-bell"></i>

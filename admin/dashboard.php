@@ -61,9 +61,9 @@
         </aside>
 
         <div class="dashboard-wrapper">
-
             <nav class="top-navbar">
-                <div class="d-flex align-items-center justify-content-end">
+                <div class="d-flex align-items-center justify-content-between">
+                    <i class="bi bi-layout-sidebar-inset fs-4"></i>
                     <div class="d-flex align-items-center gap-2 top-navbar-actions">
                         <button type="button" class="btn btn-light btn-sm top-navbar-icon">
                             <i class="bi bi-bell"></i>

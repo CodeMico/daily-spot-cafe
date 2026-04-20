@@ -66,7 +66,8 @@
 
         <div class="dashboard-wrapper">
             <nav class="top-navbar">
-                <div class="d-flex align-items-center justify-content-end">
+                <div class="d-flex align-items-center justify-content-between">
+                    <i id="sidebarToggle" class="bi bi-layout-sidebar-inset fs-4" style="cursor: pointer;"></i>
                     <div class="d-flex align-items-center gap-2 top-navbar-actions">
                         <button type="button" class="btn btn-light btn-sm top-navbar-icon">
                             <i class="bi bi-bell"></i>
@@ -150,7 +151,7 @@
 
     <!-- ADD PRODUCTS MODAL -->
      <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content border-0 shadow-lg">
             <div class="modal-header border-0 pb-0">
                 <h5 class="modal-title fw-bold" id="addProductModalLabel">Add New Product</h5>
