@@ -4,35 +4,28 @@
 
 ---
 
-## 📌 About
-
-Daily Spot Cafe is a frontend web project designed to simulate a cafe website interface.  
-It focuses on clean UI/UX, interactive navigation, and structured layout for displaying products and menu items.
-
-This project is ideal for:
-- UI/UX practice
-- Frontend development training
-- Portfolio showcasing
-
----
-
-## ✨ Features
-
-- 🍽️ Cafe menu and product display
-- 📂 Sidebar navigation with toggle functionality
-- 🎨 Clean and modern UI design
-- 📱 Responsive layout
-- ⚡ Lightweight and fast performance
-- 🧭 Organized sections for easy navigation
-
----
-
 ## 🛠 Tech Stack
 
+**Frontend**
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
+- JavaScript
+- Bootstrap *(Framework)*
 
+**Backend**
+- PHP
+
+**Database**
+- MySQL
+
+**Server**
+- Apache
+
+**Tools**
+- VS Code *(Code Editor)*
+- MySQL Workbench *(Database)*
+- XAMPP *(Server)*
+- Git & Github *(Version Control)*
 ---
 
 ## 📁 Project Structure
